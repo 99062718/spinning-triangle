@@ -1,7 +1,9 @@
 cmake_minimum_required(VERSION 3.4.1 FATAL_ERROR)
 project(Spinning_Triangle)
 
-set(START src/test.cpp)
+set(START main.cpp)
+
+add_subdirectory(src)
 
 add_executable(app ${START})
 
