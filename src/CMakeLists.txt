@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.4.1)
 
-add_library(test_library ${HEADER_LIST})
+add_library(test_library test.cpp ${HEADER_LIST})
 
 target_include_directories(test_library PUBLIC ../include)
 

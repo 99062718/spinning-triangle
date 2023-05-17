@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/KedengKedeng/Documents/GitHub/spinning-triangle
+CMAKE_SOURCE_DIR = /home/TheLennyGod/Documents/GitHub/spinning-triangle
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/KedengKedeng/Documents/GitHub/spinning-triangle/bin
+CMAKE_BINARY_DIR = /home/TheLennyGod/Documents/GitHub/spinning-triangle/bin
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/KedengKedeng/Documents/GitHub/spinning-triangle/bin/CMakeFiles /home/KedengKedeng/Documents/GitHub/spinning-triangle/bin//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/TheLennyGod/Documents/GitHub/spinning-triangle/bin/CMakeFiles /home/TheLennyGod/Documents/GitHub/spinning-triangle/bin//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/KedengKedeng/Documents/GitHub/spinning-triangle/bin/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/TheLennyGod/Documents/GitHub/spinning-triangle/bin/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -129,29 +129,42 @@ app/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/build
 .PHONY : app/fast
 
-src/test.o: src/test.cpp.o
-.PHONY : src/test.o
+#=============================================================================
+# Target rules for targets named test_library
+
+# Build rule for target.
+test_library: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_library
+.PHONY : test_library
+
+# fast build rule for target.
+test_library/fast:
+	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/test_library.dir/build.make src/CMakeFiles/test_library.dir/build
+.PHONY : test_library/fast
+
+main.o: main.cpp.o
+.PHONY : main.o
 
 # target to build an object file
-src/test.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/test.cpp.o
-.PHONY : src/test.cpp.o
+main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/main.cpp.o
+.PHONY : main.cpp.o
 
-src/test.i: src/test.cpp.i
-.PHONY : src/test.i
+main.i: main.cpp.i
+.PHONY : main.i
 
 # target to preprocess a source file
-src/test.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/test.cpp.i
-.PHONY : src/test.cpp.i
+main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/main.cpp.i
+.PHONY : main.cpp.i
 
-src/test.s: src/test.cpp.s
-.PHONY : src/test.s
+main.s: main.cpp.s
+.PHONY : main.s
 
 # target to generate assembly for a file
-src/test.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/test.cpp.s
-.PHONY : src/test.cpp.s
+main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/main.cpp.s
+.PHONY : main.cpp.s
 
 # Help Target
 help:
@@ -162,9 +175,10 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... app"
-	@echo "... src/test.o"
-	@echo "... src/test.i"
-	@echo "... src/test.s"
+	@echo "... test_library"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 .PHONY : help
 
 

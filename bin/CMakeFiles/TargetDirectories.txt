@@ -1,3 +1,6 @@
-/home/KedengKedeng/Documents/GitHub/spinning-triangle/bin/CMakeFiles/app.dir
-/home/KedengKedeng/Documents/GitHub/spinning-triangle/bin/CMakeFiles/edit_cache.dir
-/home/KedengKedeng/Documents/GitHub/spinning-triangle/bin/CMakeFiles/rebuild_cache.dir
+/home/TheLennyGod/Documents/GitHub/spinning-triangle/bin/CMakeFiles/app.dir
+/home/TheLennyGod/Documents/GitHub/spinning-triangle/bin/CMakeFiles/edit_cache.dir
+/home/TheLennyGod/Documents/GitHub/spinning-triangle/bin/CMakeFiles/rebuild_cache.dir
+/home/TheLennyGod/Documents/GitHub/spinning-triangle/bin/src/CMakeFiles/test_library.dir
+/home/TheLennyGod/Documents/GitHub/spinning-triangle/bin/src/CMakeFiles/edit_cache.dir
+/home/TheLennyGod/Documents/GitHub/spinning-triangle/bin/src/CMakeFiles/rebuild_cache.dir
