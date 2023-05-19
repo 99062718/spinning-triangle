@@ -7,4 +7,4 @@ add_subdirectory(src)
 
 add_executable(app ${START})
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -lwayland-client")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -lwayland-client -DCMAKE_CXX_COMPILER=g++")

@@ -1,1 +1,1 @@
-/usr/bin/c++  -lwayland-client CMakeFiles/app.dir/main.cpp.o -o app 
+/usr/bin/c++  -lwayland-client -DCMAKE_CXX_COMPILER=g++ CMakeFiles/app.dir/main.cpp.o -o app 

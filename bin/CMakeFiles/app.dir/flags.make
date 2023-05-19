@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = 
 
-CXX_FLAGS =  -lwayland-client
+CXX_FLAGS =  -lwayland-client -DCMAKE_CXX_COMPILER=g++
 
