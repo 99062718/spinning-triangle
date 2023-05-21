@@ -10,6 +10,7 @@ static void registry_handle_global(void *data, struct wl_registry *wl_registry,
 		uint32_t name, const char *interface, uint32_t version)
 {
     struct clientState *state = (struct clientState*)data;
+    
     if (strcmp(interface, wl_compositor_interface.name) == 0) {
         state->compositor = (wl_compositor*)wl_registry_bind(
             wl_registry, name, &wl_compositor_interface, 4);

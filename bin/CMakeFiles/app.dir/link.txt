@@ -1,1 +1,1 @@
-/usr/bin/c++  -lwayland-client -DCMAKE_CXX_COMPILER=g++ CMakeFiles/app.dir/main.cpp.o -o app 
+g++  -lwayland-client -I/home/TheLennyGod/Documents/GitHub/spinning-triangle/include CMakeFiles/app.dir/src/oega.cpp.o "CMakeFiles/app.dir/src/xdg-shell-protocol.c.o" -o app 

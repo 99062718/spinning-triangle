@@ -129,42 +129,53 @@ app/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/build
 .PHONY : app/fast
 
-#=============================================================================
-# Target rules for targets named test_library
-
-# Build rule for target.
-test_library: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_library
-.PHONY : test_library
-
-# fast build rule for target.
-test_library/fast:
-	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/test_library.dir/build.make src/CMakeFiles/test_library.dir/build
-.PHONY : test_library/fast
-
-main.o: main.cpp.o
-.PHONY : main.o
+src/oega.o: src/oega.cpp.o
+.PHONY : src/oega.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/main.cpp.o
-.PHONY : main.cpp.o
+src/oega.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/oega.cpp.o
+.PHONY : src/oega.cpp.o
 
-main.i: main.cpp.i
-.PHONY : main.i
+src/oega.i: src/oega.cpp.i
+.PHONY : src/oega.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/main.cpp.i
-.PHONY : main.cpp.i
+src/oega.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/oega.cpp.i
+.PHONY : src/oega.cpp.i
 
-main.s: main.cpp.s
-.PHONY : main.s
+src/oega.s: src/oega.cpp.s
+.PHONY : src/oega.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/main.cpp.s
-.PHONY : main.cpp.s
+src/oega.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/oega.cpp.s
+.PHONY : src/oega.cpp.s
+
+src/xdg-shell-protocol.o: src/xdg-shell-protocol.c.o
+.PHONY : src/xdg-shell-protocol.o
+
+# target to build an object file
+src/xdg-shell-protocol.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/xdg-shell-protocol.c.o
+.PHONY : src/xdg-shell-protocol.c.o
+
+src/xdg-shell-protocol.i: src/xdg-shell-protocol.c.i
+.PHONY : src/xdg-shell-protocol.i
+
+# target to preprocess a source file
+src/xdg-shell-protocol.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/xdg-shell-protocol.c.i
+.PHONY : src/xdg-shell-protocol.c.i
+
+src/xdg-shell-protocol.s: src/xdg-shell-protocol.c.s
+.PHONY : src/xdg-shell-protocol.s
+
+# target to generate assembly for a file
+src/xdg-shell-protocol.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/xdg-shell-protocol.c.s
+.PHONY : src/xdg-shell-protocol.c.s
 
 # Help Target
 help:
@@ -175,10 +186,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... app"
-	@echo "... test_library"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... src/oega.o"
+	@echo "... src/oega.i"
+	@echo "... src/oega.s"
+	@echo "... src/xdg-shell-protocol.o"
+	@echo "... src/xdg-shell-protocol.i"
+	@echo "... src/xdg-shell-protocol.s"
 .PHONY : help
 
 
