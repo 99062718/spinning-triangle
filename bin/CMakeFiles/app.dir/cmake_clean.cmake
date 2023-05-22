@@ -1,6 +1,10 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/app.dir/src/oega.cpp.o"
-  "CMakeFiles/app.dir/src/oega.cpp.o.d"
+  "CMakeFiles/app.dir/src/client.cpp.o"
+  "CMakeFiles/app.dir/src/client.cpp.o.d"
+  "CMakeFiles/app.dir/src/main.cpp.o"
+  "CMakeFiles/app.dir/src/main.cpp.o.d"
+  "CMakeFiles/app.dir/src/shmHandler.cpp.o"
+  "CMakeFiles/app.dir/src/shmHandler.cpp.o.d"
   "CMakeFiles/app.dir/src/xdg-shell-protocol.c.o"
   "CMakeFiles/app.dir/src/xdg-shell-protocol.c.o.d"
   "app"

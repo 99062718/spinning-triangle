@@ -1,1 +1,1 @@
-g++  -lwayland-client -I/home/TheLennyGod/Documents/GitHub/spinning-triangle/include CMakeFiles/app.dir/src/oega.cpp.o "CMakeFiles/app.dir/src/xdg-shell-protocol.c.o" -o app 
+g++  -lwayland-client -I/home/TheLennyGod/Documents/GitHub/spinning-triangle/include CMakeFiles/app.dir/src/client.cpp.o CMakeFiles/app.dir/src/main.cpp.o CMakeFiles/app.dir/src/shmHandler.cpp.o "CMakeFiles/app.dir/src/xdg-shell-protocol.c.o" -o app 

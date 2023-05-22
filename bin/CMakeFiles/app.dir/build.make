@@ -69,24 +69,52 @@ include CMakeFiles/app.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/app.dir/flags.make
 
-CMakeFiles/app.dir/src/oega.cpp.o: CMakeFiles/app.dir/flags.make
-CMakeFiles/app.dir/src/oega.cpp.o: /home/TheLennyGod/Documents/GitHub/spinning-triangle/src/oega.cpp
-CMakeFiles/app.dir/src/oega.cpp.o: CMakeFiles/app.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/TheLennyGod/Documents/GitHub/spinning-triangle/bin/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/app.dir/src/oega.cpp.o"
-	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/app.dir/src/oega.cpp.o -MF CMakeFiles/app.dir/src/oega.cpp.o.d -o CMakeFiles/app.dir/src/oega.cpp.o -c /home/TheLennyGod/Documents/GitHub/spinning-triangle/src/oega.cpp
+CMakeFiles/app.dir/src/client.cpp.o: CMakeFiles/app.dir/flags.make
+CMakeFiles/app.dir/src/client.cpp.o: /home/TheLennyGod/Documents/GitHub/spinning-triangle/src/client.cpp
+CMakeFiles/app.dir/src/client.cpp.o: CMakeFiles/app.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/TheLennyGod/Documents/GitHub/spinning-triangle/bin/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/app.dir/src/client.cpp.o"
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/app.dir/src/client.cpp.o -MF CMakeFiles/app.dir/src/client.cpp.o.d -o CMakeFiles/app.dir/src/client.cpp.o -c /home/TheLennyGod/Documents/GitHub/spinning-triangle/src/client.cpp
 
-CMakeFiles/app.dir/src/oega.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/app.dir/src/oega.cpp.i"
-	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/TheLennyGod/Documents/GitHub/spinning-triangle/src/oega.cpp > CMakeFiles/app.dir/src/oega.cpp.i
+CMakeFiles/app.dir/src/client.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/app.dir/src/client.cpp.i"
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/TheLennyGod/Documents/GitHub/spinning-triangle/src/client.cpp > CMakeFiles/app.dir/src/client.cpp.i
 
-CMakeFiles/app.dir/src/oega.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/app.dir/src/oega.cpp.s"
-	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/TheLennyGod/Documents/GitHub/spinning-triangle/src/oega.cpp -o CMakeFiles/app.dir/src/oega.cpp.s
+CMakeFiles/app.dir/src/client.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/app.dir/src/client.cpp.s"
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/TheLennyGod/Documents/GitHub/spinning-triangle/src/client.cpp -o CMakeFiles/app.dir/src/client.cpp.s
+
+CMakeFiles/app.dir/src/main.cpp.o: CMakeFiles/app.dir/flags.make
+CMakeFiles/app.dir/src/main.cpp.o: /home/TheLennyGod/Documents/GitHub/spinning-triangle/src/main.cpp
+CMakeFiles/app.dir/src/main.cpp.o: CMakeFiles/app.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/TheLennyGod/Documents/GitHub/spinning-triangle/bin/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/app.dir/src/main.cpp.o"
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/app.dir/src/main.cpp.o -MF CMakeFiles/app.dir/src/main.cpp.o.d -o CMakeFiles/app.dir/src/main.cpp.o -c /home/TheLennyGod/Documents/GitHub/spinning-triangle/src/main.cpp
+
+CMakeFiles/app.dir/src/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/app.dir/src/main.cpp.i"
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/TheLennyGod/Documents/GitHub/spinning-triangle/src/main.cpp > CMakeFiles/app.dir/src/main.cpp.i
+
+CMakeFiles/app.dir/src/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/app.dir/src/main.cpp.s"
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/TheLennyGod/Documents/GitHub/spinning-triangle/src/main.cpp -o CMakeFiles/app.dir/src/main.cpp.s
+
+CMakeFiles/app.dir/src/shmHandler.cpp.o: CMakeFiles/app.dir/flags.make
+CMakeFiles/app.dir/src/shmHandler.cpp.o: /home/TheLennyGod/Documents/GitHub/spinning-triangle/src/shmHandler.cpp
+CMakeFiles/app.dir/src/shmHandler.cpp.o: CMakeFiles/app.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/TheLennyGod/Documents/GitHub/spinning-triangle/bin/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/app.dir/src/shmHandler.cpp.o"
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/app.dir/src/shmHandler.cpp.o -MF CMakeFiles/app.dir/src/shmHandler.cpp.o.d -o CMakeFiles/app.dir/src/shmHandler.cpp.o -c /home/TheLennyGod/Documents/GitHub/spinning-triangle/src/shmHandler.cpp
+
+CMakeFiles/app.dir/src/shmHandler.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/app.dir/src/shmHandler.cpp.i"
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/TheLennyGod/Documents/GitHub/spinning-triangle/src/shmHandler.cpp > CMakeFiles/app.dir/src/shmHandler.cpp.i
+
+CMakeFiles/app.dir/src/shmHandler.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/app.dir/src/shmHandler.cpp.s"
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/TheLennyGod/Documents/GitHub/spinning-triangle/src/shmHandler.cpp -o CMakeFiles/app.dir/src/shmHandler.cpp.s
 
 CMakeFiles/app.dir/src/xdg-shell-protocol.c.o: CMakeFiles/app.dir/flags.make
 CMakeFiles/app.dir/src/xdg-shell-protocol.c.o: /home/TheLennyGod/Documents/GitHub/spinning-triangle/src/xdg-shell-protocol.c
 CMakeFiles/app.dir/src/xdg-shell-protocol.c.o: CMakeFiles/app.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/TheLennyGod/Documents/GitHub/spinning-triangle/bin/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/app.dir/src/xdg-shell-protocol.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/TheLennyGod/Documents/GitHub/spinning-triangle/bin/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/app.dir/src/xdg-shell-protocol.c.o"
 	gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/app.dir/src/xdg-shell-protocol.c.o -MF CMakeFiles/app.dir/src/xdg-shell-protocol.c.o.d -o CMakeFiles/app.dir/src/xdg-shell-protocol.c.o -c /home/TheLennyGod/Documents/GitHub/spinning-triangle/src/xdg-shell-protocol.c
 
 CMakeFiles/app.dir/src/xdg-shell-protocol.c.i: cmake_force
@@ -99,17 +127,21 @@ CMakeFiles/app.dir/src/xdg-shell-protocol.c.s: cmake_force
 
 # Object files for target app
 app_OBJECTS = \
-"CMakeFiles/app.dir/src/oega.cpp.o" \
+"CMakeFiles/app.dir/src/client.cpp.o" \
+"CMakeFiles/app.dir/src/main.cpp.o" \
+"CMakeFiles/app.dir/src/shmHandler.cpp.o" \
 "CMakeFiles/app.dir/src/xdg-shell-protocol.c.o"
 
 # External object files for target app
 app_EXTERNAL_OBJECTS =
 
-app: CMakeFiles/app.dir/src/oega.cpp.o
+app: CMakeFiles/app.dir/src/client.cpp.o
+app: CMakeFiles/app.dir/src/main.cpp.o
+app: CMakeFiles/app.dir/src/shmHandler.cpp.o
 app: CMakeFiles/app.dir/src/xdg-shell-protocol.c.o
 app: CMakeFiles/app.dir/build.make
 app: CMakeFiles/app.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/TheLennyGod/Documents/GitHub/spinning-triangle/bin/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable app"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/TheLennyGod/Documents/GitHub/spinning-triangle/bin/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable app"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/app.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

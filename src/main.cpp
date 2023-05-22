@@ -1,12 +1,5 @@
 #define _POSIX_C_SOURCE 200112L
-#include <errno.h>
-#include <fcntl.h>
-#include <limits.h>
-#include <stdbool.h>
 #include <string.h>
-#include <sys/mman.h>
-#include <time.h>
-#include <unistd.h>
 #include <wayland-client.h>
 #include "xdg-shell-client-protocol.h"
 #include "client.hpp"
@@ -28,8 +21,8 @@ static void xdg_surface_configure(void* data, struct xdg_surface *xdg_surface, u
     xdg_surface_ack_configure(xdg_surface, serial);
 
     struct wl_buffer *buffer = client->drawFrame(&bufferListener);
-    wl_surface_attach(client->getSurface(), buffer, 0, 0);
-    wl_surface_commit(client->getSurface());
+    wl_surface_attach(client->wlSurface, buffer, 0, 0);
+    wl_surface_commit(client->wlSurface);
 }
 
 static const struct xdg_surface_listener xdg_surface_listener = {
@@ -80,21 +73,21 @@ static const struct wl_registry_listener wl_registry_listener = {
 int
 main(int argc, char *argv[])
 {
-    struct client_state state = { 0 };
-    state.wl_display = wl_display_connect(NULL);
-    state.wl_registry = wl_display_get_registry(state.wl_display);
-    wl_registry_add_listener(state.wl_registry, &wl_registry_listener, &state);
-    wl_display_roundtrip(state.wl_display);
+    Client client{};
+    client.wlDisplay = wl_display_connect(NULL);
+    client.wlRegistry = wl_display_get_registry(client.wlDisplay);
+    wl_registry_add_listener(client.wlRegistry, &wl_registry_listener, &client);
+    wl_display_roundtrip(client.wlDisplay);
 
-    state.wl_surface = wl_compositor_create_surface(state.wl_compositor);
-    state.xdg_surface = xdg_wm_base_get_xdg_surface(
-            state.xdg_wm_base, state.wl_surface);
-    xdg_surface_add_listener(state.xdg_surface, &xdg_surface_listener, &state);
-    state.xdg_toplevel = xdg_surface_get_toplevel(state.xdg_surface);
-    xdg_toplevel_set_title(state.xdg_toplevel, "Example client");
-    wl_surface_commit(state.wl_surface);
+    client.wlSurface = wl_compositor_create_surface(client.wlCompositor);
+    client.xdgSurface = xdg_wm_base_get_xdg_surface(
+            client.xdgWmBase, client.wlSurface);
+    xdg_surface_add_listener(client.xdgSurface, &xdg_surface_listener, &client);
+    client.xdgToplevel = xdg_surface_get_toplevel(client.xdgSurface);
+    xdg_toplevel_set_title(client.xdgToplevel, "Example client");
+    wl_surface_commit(client.wlSurface);
 
-    while (wl_display_dispatch(state.wl_display)) {
+    while (wl_display_dispatch(client.wlDisplay)) {
         /* This space deliberately left blank */
     }
 

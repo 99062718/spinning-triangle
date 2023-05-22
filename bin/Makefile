@@ -129,29 +129,77 @@ app/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/build
 .PHONY : app/fast
 
-src/oega.o: src/oega.cpp.o
-.PHONY : src/oega.o
+src/client.o: src/client.cpp.o
+.PHONY : src/client.o
 
 # target to build an object file
-src/oega.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/oega.cpp.o
-.PHONY : src/oega.cpp.o
+src/client.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/client.cpp.o
+.PHONY : src/client.cpp.o
 
-src/oega.i: src/oega.cpp.i
-.PHONY : src/oega.i
+src/client.i: src/client.cpp.i
+.PHONY : src/client.i
 
 # target to preprocess a source file
-src/oega.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/oega.cpp.i
-.PHONY : src/oega.cpp.i
+src/client.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/client.cpp.i
+.PHONY : src/client.cpp.i
 
-src/oega.s: src/oega.cpp.s
-.PHONY : src/oega.s
+src/client.s: src/client.cpp.s
+.PHONY : src/client.s
 
 # target to generate assembly for a file
-src/oega.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/oega.cpp.s
-.PHONY : src/oega.cpp.s
+src/client.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/client.cpp.s
+.PHONY : src/client.cpp.s
+
+src/main.o: src/main.cpp.o
+.PHONY : src/main.o
+
+# target to build an object file
+src/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
+
+src/main.i: src/main.cpp.i
+.PHONY : src/main.i
+
+# target to preprocess a source file
+src/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
+
+src/main.s: src/main.cpp.s
+.PHONY : src/main.s
+
+# target to generate assembly for a file
+src/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
+
+src/shmHandler.o: src/shmHandler.cpp.o
+.PHONY : src/shmHandler.o
+
+# target to build an object file
+src/shmHandler.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/shmHandler.cpp.o
+.PHONY : src/shmHandler.cpp.o
+
+src/shmHandler.i: src/shmHandler.cpp.i
+.PHONY : src/shmHandler.i
+
+# target to preprocess a source file
+src/shmHandler.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/shmHandler.cpp.i
+.PHONY : src/shmHandler.cpp.i
+
+src/shmHandler.s: src/shmHandler.cpp.s
+.PHONY : src/shmHandler.s
+
+# target to generate assembly for a file
+src/shmHandler.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/shmHandler.cpp.s
+.PHONY : src/shmHandler.cpp.s
 
 src/xdg-shell-protocol.o: src/xdg-shell-protocol.c.o
 .PHONY : src/xdg-shell-protocol.o
@@ -186,9 +234,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... app"
-	@echo "... src/oega.o"
-	@echo "... src/oega.i"
-	@echo "... src/oega.s"
+	@echo "... src/client.o"
+	@echo "... src/client.i"
+	@echo "... src/client.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
+	@echo "... src/shmHandler.o"
+	@echo "... src/shmHandler.i"
+	@echo "... src/shmHandler.s"
 	@echo "... src/xdg-shell-protocol.o"
 	@echo "... src/xdg-shell-protocol.i"
 	@echo "... src/xdg-shell-protocol.s"
