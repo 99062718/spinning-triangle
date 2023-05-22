@@ -73,7 +73,7 @@ static const struct wl_registry_listener wl_registry_listener = {
 int
 main(int argc, char *argv[])
 {
-    Client client{};
+    Client client{480, 640};
     client.wlDisplay = wl_display_connect(NULL);
     client.wlRegistry = wl_display_get_registry(client.wlDisplay);
     wl_registry_add_listener(client.wlRegistry, &wl_registry_listener, &client);

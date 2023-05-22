@@ -4,9 +4,11 @@
 #include "client.hpp"
 #include "xdg-shell-client-protocol.h"
 
+Client::Client(int height, int width):
+    height(height), width(width){}
+
 struct wl_buffer * Client::drawFrame(const wl_buffer_listener* bufferListener)
 {
-    const int width = 640, height = 480;
     int stride = width * 4;
     int size = stride * height;
 
