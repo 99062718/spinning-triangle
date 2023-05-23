@@ -1,6 +1,7 @@
 #define _POSIX_C_SOURCE 200112L
 #include <string.h>
 #include <wayland-client.h>
+#include <iostream>
 #include "xdg-shell-client-protocol.h"
 #include "client.hpp"
 
@@ -73,7 +74,19 @@ static const struct wl_registry_listener wl_registry_listener = {
 int
 main(int argc, char *argv[])
 {
-    Client client{480, 640};
+    std::string answer;
+    int height, width;
+    std::cout << "enter screen height" << std::endl;
+    std::cin >> answer;
+    height = std::stoi(answer);
+    std::cout << "enter screen width" << std::endl;
+    std::cin >> answer;
+    width = std::stoi(answer);
+
+
+    Client client{height, width};
+
+
     client.wlDisplay = wl_display_connect(NULL);
     client.wlRegistry = wl_display_get_registry(client.wlDisplay);
     wl_registry_add_listener(client.wlRegistry, &wl_registry_listener, &client);
