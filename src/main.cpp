@@ -41,6 +41,40 @@ static const struct xdg_wm_base_listener xdg_wm_base_listener = {
 };
 
 static void
+wl_surface_frame_done(void *data, struct wl_callback *cb, uint32_t time);
+
+static const struct wl_callback_listener wl_surface_frame_listener = {
+	.done = wl_surface_frame_done,
+};
+
+static void
+wl_surface_frame_done(void *data, struct wl_callback *cb, uint32_t time)
+{
+	/* Destroy this callback */
+	wl_callback_destroy(cb);
+
+	/* Request another frame */
+	Client *state = (Client*)data;
+	cb = wl_surface_frame(state->wlSurface);
+	wl_callback_add_listener(cb, &wl_surface_frame_listener, state);
+
+	/* Update scroll amount at 24 pixels per second */
+	if (state->getLastFrame() != 0) {
+		int elapsed = time - state->getLastFrame();
+		state->setOffset(state->getOffset() + (elapsed / 1000.0 * 24));
+	}
+
+	/* Submit a frame for this event */
+	struct wl_buffer *buffer = state->drawFrame(&bufferListener);
+	wl_surface_attach(state->wlSurface, buffer, 0, 0);
+	wl_surface_damage_buffer(state->wlSurface, 0, 0, INT32_MAX, INT32_MAX);
+	wl_surface_commit(state->wlSurface);
+
+	state->setLastFrame(time);
+}
+
+
+static void
 registry_global(void *data, struct wl_registry *wl_registry,
         uint32_t name, const char *interface, uint32_t version)
 {
@@ -99,6 +133,9 @@ main(int argc, char *argv[])
     client.xdgToplevel = xdg_surface_get_toplevel(client.xdgSurface);
     xdg_toplevel_set_title(client.xdgToplevel, "Example client");
     wl_surface_commit(client.wlSurface);
+
+    struct wl_callback *cb = wl_surface_frame(client.wlSurface);
+	wl_callback_add_listener(cb, &wl_surface_frame_listener, &client);
 
     while (wl_display_dispatch(client.wlDisplay)) {
         /* This space deliberately left blank */

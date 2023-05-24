@@ -7,6 +7,22 @@
 Client::Client(int height, int width):
     height(height), width(width){}
 
+void Client::setOffset(float newOffset){
+    offset = newOffset;
+}
+
+void Client::setLastFrame(uint32_t newFrame){
+    lastFrame = newFrame;
+}
+
+uint32_t Client::getLastFrame(){
+    return lastFrame;
+}
+
+float Client::getOffset(){
+    return offset;
+}
+
 struct wl_buffer * Client::drawFrame(const wl_buffer_listener* bufferListener)
 {
     int stride = width * 4;
@@ -31,9 +47,10 @@ struct wl_buffer * Client::drawFrame(const wl_buffer_listener* bufferListener)
     close(fd);
 
     /* Draw checkerboxed background */
+    int frameOffset = (int)offset % 8;
     for (int y = 0; y < height; ++y) {
         for (int x = 0; x < width; ++x) {
-            if ((x + y / 8 * 8) % 16 < 8)
+			if (((x + frameOffset) + (y + frameOffset) / 8 * 8) % 16 < 8)
                 data[y * width + x] = 0xFF666666;
             else
                 data[y * width + x] = 0xFFEEEEEE;

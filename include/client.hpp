@@ -6,6 +6,8 @@ class Client{
 private:
     ShmHandler shmHandler{};
     int width, height;
+    float offset;
+    uint32_t lastFrame;
 public:
     /* Globals */
     struct wl_display *wlDisplay = nullptr;
@@ -19,6 +21,11 @@ public:
     struct xdg_toplevel *xdgToplevel = nullptr;
 
     Client(int width, int height);
+
+    void setOffset(float newOffset);
+    void setLastFrame(uint32_t newFrame);
+    float getOffset();
+    uint32_t getLastFrame();
 
     struct wl_buffer* drawFrame(const wl_buffer_listener* bufferListener);
 };
