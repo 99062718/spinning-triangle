@@ -7,7 +7,7 @@ private:
     ShmHandler shmHandler{};
     int width, height;
     float offset;
-    uint32_t lastFrame;
+    uint32_t lastFrame = 1;
 public:
     /* Globals */
     struct wl_display *wlDisplay = nullptr;
